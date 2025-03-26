@@ -5,19 +5,94 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PE_AtividadesDiárias"
         WindowStartupLocation="CenterScreen"
-        Background="Transparent"
-        AllowsTransparency="True"
-        WindowStyle="None"
+        Style="{StaticResource WindowsMainStyle}"
         Title="MainWindow"
         mc:Ignorable="d">
-    
-    <Border CornerRadius="16"
+
+    <Border Style="{StaticResource BorderMainStyle}"
             Height="600" 
-            Width="400"
-            Background="LightGray">
+            Width="400">
+
         <Grid>
             
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="440"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Grid Name="Header" 
+                  Grid.Row="0">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Name="border_add"
+                        Style="{StaticResource BorderButtonUpdateStyle}"
+                        Grid.Column="0"
+                        Margin="30 20 30 20">
+                    <Label Style="{StaticResource LabelButton}"
+                           Content="Add Task"/>
+                </Border>
+
+                <Label Name="label_Date" 
+                       Style="{StaticResource LabelDate}"
+                       Grid.Column="1"
+                       Content="25/06/2025"/>
+
+            </Grid>
+
+            <StackPanel Name="Body"
+                        Margin="0"
+                        Grid.Row="1"
+                        CanHorizontallyScroll="False"
+                        Orientation="Vertical">
+                
+            </StackPanel>
+            
+            <Grid Name="Footer" 
+                  Grid.Row="2">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Name="border_export"
+                        Style="{StaticResource BorderButtonRemoveStyle}"
+                        Grid.Column="0"
+                        Margin="30 20 30 20">
+                    
+                    <Label  Style="{StaticResource LabelButton}"
+                            Content="Remove Task"/>
+                </Border>
+
+                <Grid Grid.Column="1">
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label Name="label_AmountHours"
+                           Style="{StaticResource LabelHoursAmount}"
+                           VerticalAlignment="Bottom"
+                           Content="Amount Hours"/>
+
+                    <Label Name="label_AmountHoursValue"
+                           Style="{StaticResource LabelHoursAmount}"
+                           VerticalAlignment="Top"
+                           Grid.Row="1"
+                           Content="08:00"/>
+                </Grid>
+                
+
+            </Grid>
+            
         </Grid>
+        
     </Border>
-    
+
 </Window>

@@ -20,4 +20,12 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+
+    protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+    {
+        base.OnMouseLeftButtonDown(e);
+
+        this.DragMove();
+    }
+
 }
