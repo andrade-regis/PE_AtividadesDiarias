@@ -1,20 +1,20 @@
-﻿<Window x:Class="PE_AtividadesDiárias.MainWindow"
+﻿<Window x:Class="PE_AtividadesDiárias.UI.Main"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PE_AtividadesDiárias"
-        WindowStartupLocation="CenterScreen"
+        xmlns:local="clr-namespace:PE_AtividadesDiárias.UI"
         Style="{StaticResource WindowsMainStyle}"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow"
         mc:Ignorable="d">
 
     <Border Style="{StaticResource BorderMainStyle}"
-            Height="600" 
-            Width="400">
+        Height="600" 
+        Width="400">
 
         <Grid>
-            
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="440"/>
@@ -22,77 +22,78 @@
             </Grid.RowDefinitions>
 
             <Grid Name="Header" 
-                  Grid.Row="0">
-                
+              Grid.Row="0">
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <Border Name="border_add"
-                        Style="{StaticResource BorderButtonUpdateStyle}"
-                        Grid.Column="0"
-                        Margin="30 20 30 20">
+                    Style="{StaticResource BorderButtonUpdateStyle}"
+                    Grid.Column="0"
+                    Margin="30 20 30 20" MouseLeftButtonDown="border_add_MouseLeftButtonDown">
                     <Label Style="{StaticResource LabelButton}"
-                           Content="Add Task"/>
+                       Content="Add Task"/>
                 </Border>
 
                 <Label Name="label_Date" 
-                       Style="{StaticResource LabelDate}"
-                       Grid.Column="1"
-                       Content="25/06/2025"/>
+                   Style="{StaticResource LabelDate}"
+                   Grid.Column="1"
+                   Content="25/06/2025"/>
 
             </Grid>
 
-            <StackPanel Name="Body"
-                        Margin="0"
-                        Grid.Row="1"
-                        CanHorizontallyScroll="False"
-                        Orientation="Vertical">
+            <ScrollViewer Grid.Row="1"
+                          VerticalScrollBarVisibility="Hidden">
+
+                <StackPanel Orientation="Vertical"
+                            Name="stack_content">
+                </StackPanel>
                 
-            </StackPanel>
+            </ScrollViewer>
+            
             
             <Grid Name="Footer" 
-                  Grid.Row="2">
-                
+              Grid.Row="2">
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <Border Name="border_export"
-                        Style="{StaticResource BorderButtonRemoveStyle}"
-                        Grid.Column="0"
-                        Margin="30 20 30 20">
-                    
+                    Style="{StaticResource BorderButtonExportStyle}"
+                    Grid.Column="0"
+                    Margin="30 20 30 20" MouseLeftButtonDown="border_export_MouseLeftButtonDown">
+
                     <Label  Style="{StaticResource LabelButton}"
-                            Content="Remove Task"/>
+                        Content="Export Tasks"/>
                 </Border>
 
                 <Grid Grid.Column="1">
-                    
+
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    
+
                     <Label Name="label_AmountHours"
-                           Style="{StaticResource LabelHoursAmount}"
-                           VerticalAlignment="Bottom"
-                           Content="Amount Hours"/>
+                       Style="{StaticResource LabelHoursAmount}"
+                       VerticalAlignment="Bottom"
+                       Content="Amount Hours"/>
 
                     <Label Name="label_AmountHoursValue"
-                           Style="{StaticResource LabelHoursAmount}"
-                           VerticalAlignment="Top"
-                           Grid.Row="1"
-                           Content="08:00"/>
+                       Style="{StaticResource LabelHoursAmount}"
+                       VerticalAlignment="Top"
+                       Grid.Row="1"
+                       Content="08:00"/>
                 </Grid>
-                
+
 
             </Grid>
-            
-        </Grid>
-        
-    </Border>
 
+        </Grid>
+
+    </Border>
 </Window>

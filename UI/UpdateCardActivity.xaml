@@ -1,0 +1,82 @@
+﻿<Window x:Class="PE_AtividadesDiárias.UI.UpdateCardActivity"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PE_AtividadesDiárias.UI"
+        Style="{StaticResource WindowsMainStyle}"
+        mc:Ignorable="d">
+
+    <Border Style="{StaticResource BorderMainStyle}"
+        Height="200" 
+        Width="500">
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Descrição: "
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"
+               FontSize="16"
+               Margin="15 0 0 50"/>
+
+            <TextBox x:Name="Textbox_Descrição"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Right"
+                 Width="380"
+                 Margin="0 0 20 50"/>
+
+            <Label Content="Minutes: "
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"
+               FontSize="16"
+               Margin="15 40 0 0"/>
+
+            <TextBox x:Name="TextBox_Time"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Left"
+                  Width="100"
+                  Margin="100 40 0 0"/>
+
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Name="border_update"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Style="{StaticResource BorderButtonUpdateStyle}"
+                    Margin="50 10 50 10" MouseLeftButtonDown="border_update_MouseLeftButtonDown">
+
+                    <Label Style="{StaticResource LabelButton}"
+                       FontSize="18"
+                       Padding="0"
+                       Content="Add"/>
+                </Border>
+
+                <Border Name="border_remove"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Style="{StaticResource BorderButtonRemoveStyle}"
+                    Margin="50 10 50 10" MouseLeftButtonDown="border_remove_MouseLeftButtonDown">
+
+                    <Label Style="{StaticResource LabelButton}"
+                       FontSize="18"
+                       Padding="0"
+                       Content="Cancel"/>
+                </Border>
+
+            </Grid>
+
+        </Grid>
+
+    </Border>
+
+</Window>
