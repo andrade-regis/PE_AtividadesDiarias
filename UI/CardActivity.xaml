@@ -25,6 +25,8 @@
                    Padding="0 0 0 0"
                    TextWrapping="WrapWithOverflow"
                    Margin="10 5 10 5"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
                    Grid.Column="0"
                    Grid.Row="0"/>
 
@@ -39,7 +41,7 @@
                 Grid.Column="0"
                 Grid.Row="1"
                 Style="{StaticResource BorderButtonUpdateStyle}"
-                Margin="50 10 50 10">
+                Margin="60 10 60 10">
             
             <Label Style="{StaticResource LabelButton}"
                    FontSize="11"
@@ -51,7 +53,7 @@
                 Grid.Column="1"
                 Grid.Row="1"
                 Style="{StaticResource BorderButtonRemoveStyle}"
-                Margin="50 10 50 10">
+                Margin="60 10 60 10">
 
             <Label Style="{StaticResource LabelButton}"
                    FontSize="11"

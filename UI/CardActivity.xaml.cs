@@ -12,23 +12,17 @@ public partial class CardActivity : UserControl
         InitializeComponent();
     }
 
-    public int Id { get; set; }
+    public string ActivityDescription { get; private set; }
 
-    public string ActivityDescription { get; set; }
+    public TimeSpan Time { get; private set; }
 
-    public TimeSpan Time { get;  set; }
-    
-    public DateTime Day { get; set; }  
-
-    public void Insert_Informations(int id, 
-                                    string activityDescription, 
-                                    TimeSpan time, 
-                                    DateTime day)
+    public void Insert_Informations(string activityDescription, 
+                                    TimeSpan time)
     {
-            Id = id;
-            ActivityDescription = activityDescription;
-            Time = time;
-            Day = day;
+        ActivityDescription = activityDescription;
+        Time = time;
+
+        Update_Controller();
     }
 
     public void Update_Controller()

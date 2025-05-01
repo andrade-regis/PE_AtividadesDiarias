@@ -40,7 +40,7 @@
                   VerticalAlignment="Center"
                   HorizontalAlignment="Left"
                   Width="100"
-                  Margin="100 40 0 0"/>
+                  Margin="100 40 0 0" KeyDown="TextBox_Time_KeyDown" KeyUp="TextBox_Time_KeyUp"/>
 
             <Grid Grid.Row="1">
 
@@ -61,11 +61,11 @@
                        Content="Add"/>
                 </Border>
 
-                <Border Name="border_remove"
+                <Border Name="border_cancel"
                     Grid.Column="1"
                     Grid.Row="1"
                     Style="{StaticResource BorderButtonRemoveStyle}"
-                    Margin="50 10 50 10" MouseLeftButtonDown="border_remove_MouseLeftButtonDown">
+                    Margin="50 10 50 10" MouseLeftButtonDown="border_cancel_MouseLeftButtonDown">
 
                     <Label Style="{StaticResource LabelButton}"
                        FontSize="18"
