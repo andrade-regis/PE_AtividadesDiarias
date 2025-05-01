@@ -30,10 +30,10 @@
                    Grid.Column="0"
                    Grid.Row="0"/>
 
-        <Label Name="Activity_Time"
-               VerticalContentAlignment="Center"               
-               HorizontalContentAlignment="Center"
-               Content="Tempo: 00:00"
+        <TextBlock Name="Activity_Time"
+               HorizontalAlignment="Center"               
+               VerticalAlignment="Center"
+               Text="Time: 00:00"
                Grid.Column="1"
                Grid.Row="0"/>
 
@@ -41,7 +41,8 @@
                 Grid.Column="0"
                 Grid.Row="1"
                 Style="{StaticResource BorderButtonUpdateStyle}"
-                Margin="60 10 60 10">
+                CornerRadius="8"
+                Margin="40 10 40 10">
             
             <Label Style="{StaticResource LabelButton}"
                    FontSize="11"
@@ -53,7 +54,8 @@
                 Grid.Column="1"
                 Grid.Row="1"
                 Style="{StaticResource BorderButtonRemoveStyle}"
-                Margin="60 10 60 10">
+                CornerRadius="8"
+                Margin="40 10 40 10">
 
             <Label Style="{StaticResource LabelButton}"
                    FontSize="11"

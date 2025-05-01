@@ -38,9 +38,10 @@
                 </Border>
 
                 <Label Name="label_Date" 
-                   Style="{StaticResource LabelDate}"
-                   Grid.Column="1"
-                   Content="25/06/2025"/>
+                       Style="{StaticResource LabelDate}"
+                       Grid.Column="1"
+                       MouseDoubleClick="label_Date_MouseDoubleClick"
+                       Content="25/06/2025"/>
 
             </Grid>
 

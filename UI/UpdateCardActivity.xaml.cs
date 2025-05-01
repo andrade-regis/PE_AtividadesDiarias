@@ -18,14 +18,14 @@ namespace PE_AtividadesDiárias.UI
             InitializeComponent();
         }
 
-        public UpdateCardActivity(string description, TimeSpan time)
+        public UpdateCardActivity(string activity_description, TimeSpan activity_time)
         {
             InitializeComponent();
 
-            this.Description = description;
+            this.Description = activity_description;
             Textbox_Descrição.Text = this.Description;
 
-            this.time = time;
+            this.time = activity_time;
             TextBox_Time.Text = time.ToString(@"hh\:mm");
         }
 
